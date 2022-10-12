@@ -12,6 +12,7 @@
 namespace Symfony\Component\Validator\Validator;
 
 use Symfony\Component\Validator\Constraint;
+use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints\Composite;
 use Symfony\Component\Validator\Constraints\Existence;
 use Symfony\Component\Validator\Constraints\GroupSequence;
@@ -191,7 +192,7 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
             $this->validateGenericNode(
                 $propertyValue,
                 $object,
-                $cacheKey.':'.\get_class($object).':'.$propertyName,
+                $cacheKey . ':' . \get_class($object) . ':' . $propertyName,
                 $propertyMetadata,
                 $propertyPath,
                 $groups,
@@ -244,7 +245,7 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
             $this->validateGenericNode(
                 $value,
                 $object,
-                $cacheKey.':'.$class.':'.$propertyName,
+                $cacheKey . ':' . $class . ':' . $propertyName,
                 $propertyMetadata,
                 $propertyPath,
                 $groups,
@@ -347,12 +348,16 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
      */
     private function validateEachObjectIn(iterable $collection, string $propertyPath, array $groups, ExecutionContextInterface $context)
     {
+        if ($collection instanceof Collection) {
+            $collection = $collection->getValues();
+        }
+
         foreach ($collection as $key => $value) {
             if (\is_array($value)) {
                 // Also traverse nested arrays
                 $this->validateEachObjectIn(
                     $value,
-                    $propertyPath.'['.$key.']',
+                    $propertyPath . '[' . $key . ']',
                     $groups,
                     $context
                 );
@@ -364,7 +369,7 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
             if (\is_object($value)) {
                 $this->validateObject(
                     $value,
-                    $propertyPath.'['.$key.']',
+                    $propertyPath . '[' . $key . ']',
                     $groups,
                     TraversalStrategy::IMPLICIT,
                     $context
@@ -515,7 +520,7 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
                 $this->validateGenericNode(
                     $propertyValue,
                     $object,
-                    $cacheKey.':'.\get_class($object).':'.$propertyName,
+                    $cacheKey . ':' . \get_class($object) . ':' . $propertyName,
                     $propertyMetadata,
                     PropertyPath::append($propertyPath, $propertyName),
                     $groups,
