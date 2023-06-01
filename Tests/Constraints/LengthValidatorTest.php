@@ -62,7 +62,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
         $this->validator->validate(new \stdClass(), new Length(['value' => 5]));
     }
 
-    public function getThreeOrLessCharacters()
+    public static function getThreeOrLessCharacters()
     {
         return [
             [12],
@@ -76,7 +76,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
         ];
     }
 
-    public function getFourCharacters()
+    public static function getFourCharacters()
     {
         return [
             [1234],
@@ -86,7 +86,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
         ];
     }
 
-    public function getFiveOrMoreCharacters()
+    public static function getFiveOrMoreCharacters()
     {
         return [
             [12345],
@@ -100,7 +100,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
         ];
     }
 
-    public function getOneCharset()
+    public static function getOneCharset()
     {
         return [
             ['é', 'utf8', true],
@@ -110,7 +110,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
         ];
     }
 
-    public function getThreeCharactersWithWhitespaces()
+    public static function getThreeCharactersWithWhitespaces()
     {
         return [
             ["\x20ccc"],
@@ -189,6 +189,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
 
     /**
      * @requires PHP 8
+     *
      * @dataProvider getThreeOrLessCharacters
      */
     public function testInvalidValuesMinNamed($value)
@@ -229,6 +230,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
 
     /**
      * @requires PHP 8
+     *
      * @dataProvider getFiveOrMoreCharacters
      */
     public function testInvalidValuesMaxNamed($value)
@@ -270,6 +272,7 @@ class LengthValidatorTest extends ConstraintValidatorTestCase
 
     /**
      * @requires PHP 8
+     *
      * @dataProvider getThreeOrLessCharacters
      */
     public function testInvalidValuesExactLessThanFourNamed($value)
