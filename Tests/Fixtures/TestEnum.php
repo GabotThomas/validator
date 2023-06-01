@@ -9,12 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\Validator\Tests\Constraints;
+namespace Symfony\Component\Validator\Tests\Fixtures;
 
-class CollectionValidatorArrayTest extends CollectionValidatorTestCase
+enum TestEnum
 {
-    public function prepareTestData(array $contents)
-    {
-        return $contents;
-    }
+    case FirstCase;
+    case SecondCase;
 }
