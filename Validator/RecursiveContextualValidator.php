@@ -336,6 +336,9 @@ class RecursiveContextualValidator implements ContextualValidatorInterface
      */
     private function validateEachObjectIn(iterable $collection, string $propertyPath, array $groups, ExecutionContextInterface $context): void
     {
+        if (is_object($collection) && method_exists($collection, 'getValues')) {
+            $collection = $collection->getValues();
+        }
         foreach ($collection as $key => $value) {
             if (\is_array($value)) {
                 // Also traverse nested arrays
