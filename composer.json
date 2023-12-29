@@ -60,5 +60,5 @@
             "/Resources/bin/"
         ]
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
