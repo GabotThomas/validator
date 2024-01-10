@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="file.ext">
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="lv" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
                 <source>This value should be false.</source>
@@ -136,7 +136,7 @@
             </trans-unit>
             <trans-unit id="37">
                 <source>This is not a valid IP address.</source>
-                <target>Šī nav derīga IP adrese.</target>
+                <target state="needs-review-translation">Šī vērtība nav derīga IP adrese.</target>
             </trans-unit>
             <trans-unit id="38">
                 <source>This value is not a valid language.</source>
@@ -224,7 +224,7 @@
             </trans-unit>
             <trans-unit id="59">
                 <source>This is not a valid International Bank Account Number (IBAN).</source>
-                <target>Šis nav derīgs starptautisks banku konta numurs (IBAN).</target>
+                <target state="needs-review-translation">Šī vērtība nav derīgs Starptautiskais Bankas Konta Numurs (IBAN).</target>
             </trans-unit>
             <trans-unit id="60">
                 <source>This value is not a valid ISBN-10.</source>
@@ -312,7 +312,7 @@
             </trans-unit>
             <trans-unit id="81">
                 <source>This is not a valid Business Identifier Code (BIC).</source>
-                <target>Šī vērtība nav derīgs Biznesa Identifikācijas Kods (BIC).</target>
+                <target state="needs-review-translation">Šī vērtība nav derīgs Uzņēmuma Identifikācijas Kods (BIC).</target>
             </trans-unit>
             <trans-unit id="82">
                 <source>Error</source>
@@ -320,7 +320,7 @@
             </trans-unit>
             <trans-unit id="83">
                 <source>This is not a valid UUID.</source>
-                <target>Šis nav derīgs UUID.</target>
+                <target state="needs-review-translation">Šī vērtība nav derīgs UUID.</target>
             </trans-unit>
             <trans-unit id="84">
                 <source>This value should be a multiple of {{ compared_value }}.</source>
@@ -401,6 +401,42 @@
             <trans-unit id="103">
                 <source>The value of the netmask should be between {{ min }} and {{ max }}.</source>
                 <target>Tīkla maskas (netmask) vērtībai jābūt starp {{ min }} un {{ max }}.</target>
+            </trans-unit>
+            <trans-unit id="104">
+                <source>The filename is too long. It should have {{ filename_max_length }} character or less.|The filename is too long. It should have {{ filename_max_length }} characters or less.</source>
+                <target>Faila nosaukums ir pārāk garš. Tas var būt {{ filename_max_length }} rakstzīme vai īsāks.|Faila nosaukums ir pārāk garš. Tas var būt {{ filename_max_length }} rakstzīmes vai īsāks.</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>The password strength is too low. Please use a stronger password.</source>
+                <target>Paroles stiprums ir pārāk zems. Lūdzu, izmantojiet spēcīgāku paroli.</target>
+            </trans-unit>
+            <trans-unit id="106">
+                <source>This value contains characters that are not allowed by the current restriction-level.</source>
+                <target>Šī vērtība satur rakstzīmes, kuras nav atļautas pašreizējā ierobežojuma līmenī.</target>
+            </trans-unit>
+            <trans-unit id="107">
+                <source>Using invisible characters is not allowed.</source>
+                <target>Neredzamu rakstzīmju izmantošana nav atļauta.</target>
+            </trans-unit>
+            <trans-unit id="108">
+                <source>Mixing numbers from different scripts is not allowed.</source>
+                <target>Nav atļauts sajaukt numurus no dažādiem skriptiem.</target>
+            </trans-unit>
+            <trans-unit id="109">
+                <source>Using hidden overlay characters is not allowed.</source>
+                <target>Slēptu pārklājuma rakstzīmju izmantošana nav atļauta.</target>
+            </trans-unit>
+            <trans-unit id="110">
+                <source>The extension of the file is invalid ({{ extension }}). Allowed extensions are {{ extensions }}.</source>
+                <target>Faila paplašinājums nav derīgs ({{ extension }}). Atļautie paplašinājumi ir {{ extensions }}.</target>
+            </trans-unit>
+            <trans-unit id="111">
+                <source>The detected character encoding is invalid ({{ detected }}). Allowed encodings are {{ encodings }}.</source>
+                <target>Noteiktais rakstzīmju kodējums nav derīgs ({{ detected }}). Atļautie kodējumi ir {{ encodings }}.</target>
+            </trans-unit>
+            <trans-unit id="112">
+                <source>This value is not a valid MAC address.</source>
+                <target state="needs-review-translation">Šī vērtība nav derīga MAC adrese.</target>
             </trans-unit>
         </body>
     </file>

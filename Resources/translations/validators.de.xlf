@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="file.ext">
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
                 <source>This value should be false.</source>
@@ -136,7 +136,7 @@
             </trans-unit>
             <trans-unit id="37">
                 <source>This is not a valid IP address.</source>
-                <target>Dies ist keine gültige IP-Adresse.</target>
+                <target>Dieser Wert ist keine gültige IP-Adresse.</target>
             </trans-unit>
             <trans-unit id="38">
                 <source>This value is not a valid language.</source>
@@ -224,7 +224,7 @@
             </trans-unit>
             <trans-unit id="59">
                 <source>This is not a valid International Bank Account Number (IBAN).</source>
-                <target>Dieser Wert ist keine gültige internationale Bankkontonummer (IBAN).</target>
+                <target>Dieser Wert ist keine gültige Internationale Bankkontonummer (IBAN).</target>
             </trans-unit>
             <trans-unit id="60">
                 <source>This value is not a valid ISBN-10.</source>
@@ -320,7 +320,7 @@
             </trans-unit>
             <trans-unit id="83">
                 <source>This is not a valid UUID.</source>
-                <target>Dies ist keine gültige UUID.</target>
+                <target>Dieser Wert ist keine gültige UUID.</target>
             </trans-unit>
             <trans-unit id="84">
                 <source>This value should be a multiple of {{ compared_value }}.</source>
@@ -405,6 +405,38 @@
             <trans-unit id="104">
                 <source>The filename is too long. It should have {{ filename_max_length }} character or less.|The filename is too long. It should have {{ filename_max_length }} characters or less.</source>
                 <target>Der Dateiname ist zu lang. Er sollte nicht länger als {{ filename_max_length }} Zeichen sein.|Der Dateiname ist zu lang. Er sollte nicht länger als {{ filename_max_length }} Zeichen sein.</target>
+            </trans-unit>
+            <trans-unit id="105">
+                <source>The password strength is too low. Please use a stronger password.</source>
+                <target>Das Passwort ist zu schwach.</target>
+            </trans-unit>
+            <trans-unit id="106">
+                <source>This value contains characters that are not allowed by the current restriction-level.</source>
+                <target>Der Wert enthält Zeichen, die auf der aktuellen Einschränkungsstufe nicht erlaubt sind.</target>
+            </trans-unit>
+            <trans-unit id="107">
+                <source>Using invisible characters is not allowed.</source>
+                <target>Unsichtbare Zeichen sind nicht erlaubt.</target>
+            </trans-unit>
+            <trans-unit id="108">
+                <source>Mixing numbers from different scripts is not allowed.</source>
+                <target>Das Mischen von Zahlen aus verschiedenen Skripten ist nicht erlaubt.</target>
+            </trans-unit>
+            <trans-unit id="109">
+                <source>Using hidden overlay characters is not allowed.</source>
+                <target>Verstecke Overlay-Zeichen sind nicht erlaubt.</target>
+            </trans-unit>
+            <trans-unit id="110">
+                <source>The extension of the file is invalid ({{ extension }}). Allowed extensions are {{ extensions }}.</source>
+                <target>Die Dateiendung ist ungültig ({{ extension }}). Gültige Dateiendungen sind {{ extensions }}.</target>
+            </trans-unit>
+            <trans-unit id="111">
+                <source>The detected character encoding is invalid ({{ detected }}). Allowed encodings are {{ encodings }}.</source>
+                <target>Der erkannte Zeichensatz ist nicht gültig ({{ detected }}). Gültige Zeichensätze sind {{ encodings }}.</target>
+            </trans-unit>
+            <trans-unit id="112">
+                <source>This value is not a valid MAC address.</source>
+                <target>Dieser Wert ist keine gültige MAC-Adresse.</target>
             </trans-unit>
         </body>
     </file>
